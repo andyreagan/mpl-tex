@@ -1,0 +1,406 @@
+%% \documentclass[12pt,twoside,byrevtex,superscriptaddress,preprint]{revtex4}
+\documentclass[12pt,twoside,byrevtex,superscriptaddress,twocolumn]{revtex4}
+%% \documentclass[superscriptaddress,twocolumn]{revtex4}
+%% \setboolean{twocolswitch}{true}
+%% \documentclass[a4paper]{book}
+
+\usepackage{graphicx}
+\usepackage{python}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\usepackage{printlen}
+\uselengthunit{in}
+
+\begin{document}
+
+%% \printinunitsof{cm}\prntlen{\textwidth} \prntlen{\textheight}
+
+This is test of the latex font size in matplotlib.
+No more guessing!
+See the accompanying \verb|readme.markdown| for more info.
+
+The text width is \printlength{\textwidth}.\\
+
+The hsize is \printlength{\hsize}.\\
+
+The column width is \printlength{\columnwidth}.\\
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 1
+figwidth=3.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 2
+figwidth=3.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 3
+figwidth=4.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 4
+figwidth=4.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 5
+figwidth=5.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 6
+figwidth=5.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 7
+figwidth=6.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 8
+figwidth=6.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 9
+figwidth=7.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 10
+figwidth=7.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 11
+figwidth=8.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 12
+figwidth=8.5
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\clearpage
+\pagebreak
+
+\blindtext
+
+\begin{python}
+iter = 13
+figwidth=9.0
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+from matplotlib import rc,rcParams
+fig = plt.figure(figsize=(figwidth,3))
+rc('xtick', labelsize=12)
+rc('ytick', labelsize=12)
+rc('text', usetex=True)
+rc('font',**{'family':'serif','serif':['cmr10']})
+# rc('font', family='serif')
+# rcParams['mathtext.fontset'] = 'stix'
+# rcParams['font.family'] = 'STIXGeneral'
+ax = fig.add_axes([0.2,0.2,0.7,0.7])
+ax.plot([0,1],[0,2])
+ax.set_title(r"Hello \LaTeX!".format(figwidth),fontsize=12)
+ax.set_xlabel(r"{0}".format(figwidth),fontsize=12)
+plt.savefig("figures/test{0:02d}.pdf".format(iter),bbox_inches="tight")
+print(r"\begin{center}Hello \LaTeX!\\\end{center}")
+print(r"\includegraphics[width=\columnwidth]{{figures/test{0:02d}.pdf}}".format(iter))
+\end{python}
+
+\end{document}
